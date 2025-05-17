@@ -5,3 +5,8 @@ class TSTNode:
         self.eq = None
         self.right = None
         self.is_end = False
+
+
+class TernarySearchTree:
+    def __init__(self):
+        self.root = None
