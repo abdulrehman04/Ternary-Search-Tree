@@ -67,3 +67,6 @@ class TernarySearchTree:
 
         self._traverse(node.eq, prefix + node.char, result)
         self._traverse(node.right, prefix, result)
+
+    def __len__(self):
+        return len(self.traverse())
