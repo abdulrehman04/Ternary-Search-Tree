@@ -50,3 +50,20 @@ class TernarySearchTree:
             if index + 1 == len(word):
                 return node.is_end
             return self._search(node.eq, word, index + 1)
+
+    def traverse(self):
+        words = []
+        self._traverse(self.root, '', words)
+        return words
+
+    def _traverse(self, node, prefix, result):
+        if node is None:
+            return
+
+        self._traverse(node.left, prefix, result)
+
+        if node.is_end:
+            result.append(prefix + node.char)
+
+        self._traverse(node.eq, prefix + node.char, result)
+        self._traverse(node.right, prefix, result)
