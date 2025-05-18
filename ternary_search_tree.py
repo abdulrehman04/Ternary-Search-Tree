@@ -18,7 +18,6 @@ class TernarySearchTree:
 
     def _insert(self, node, word, index):
         char = word[index]
-
         if node is None:
             node = TSTNode(char)
 
@@ -38,7 +37,7 @@ class TernarySearchTree:
 
     def _search(self, node, word, index):
         if node is None or not word:
-            return f'{word}  not found'
+            return False
 
         char = word[index]
 
@@ -48,7 +47,7 @@ class TernarySearchTree:
             return self._search(node.right, word, index)
         else:
             if index + 1 == len(word):
-                return node.is_end
+                return True
             return self._search(node.eq, word, index + 1)
 
     def traverse(self):
