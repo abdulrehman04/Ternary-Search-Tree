@@ -69,3 +69,6 @@ class TernarySearchTree:
 
     def __len__(self):
         return len(self.traverse())
+
+    def all_strings(self):
+        return len(self.traverse())
