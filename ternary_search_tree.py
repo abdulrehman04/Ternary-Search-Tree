@@ -32,23 +32,23 @@ class TernarySearchTree:
                 node.is_end = True
         return node
 
-    def search(self, word):
-        return self._search(self.root, word, 0)
+    def search(self, word, exact=False):
+        return self._search(self.root, word, 0, exact)
 
-    def _search(self, node, word, index):
+    def _search(self, node, word, index, exact):
         if node is None or not word:
             return False
 
         char = word[index]
 
         if char < node.char:
-            return self._search(node.left, word, index)
+            return self._search(node.left, word, index, exact)
         elif char > node.char:
-            return self._search(node.right, word, index)
+            return self._search(node.right, word, index, exact)
         else:
             if index + 1 == len(word):
-                return True
-            return self._search(node.eq, word, index + 1)
+                return node.is_end if exact else True
+        return self._search(node.eq, word, index + 1, exact)
 
     def traverse(self):
         words = []
