@@ -36,7 +36,10 @@ class TernarySearchTree:
         return self._search(self.root, word, 0, exact)
 
     def _search(self, node, word, index, exact):
-        if node is None or not word:
+        if word == '':
+            return not exact and node is not None
+
+        if node is None:
             return False
 
         char = word[index]
