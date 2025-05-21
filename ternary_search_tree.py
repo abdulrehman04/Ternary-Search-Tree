@@ -71,4 +71,4 @@ class TernarySearchTree:
         return len(self.traverse())
 
     def all_strings(self):
-        return len(self.traverse())
+        return self.traverse()
