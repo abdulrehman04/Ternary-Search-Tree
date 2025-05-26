@@ -14,9 +14,36 @@ This project implements a *Ternary Search Tree (TST)* from scratch in Python and
 
 ## 🗂️ Directory Structure
 
-bash
+```bash
 .
 ├── data/                          # Input dictionary (word list)
 ├── benchmark_plot.png            # Output benchmark plot
 ├── main_job.slurm                # SLURM job script for HPC
 ├── ternary_search_tree.ipynb     # Usage + test notebook
+
+```
+
+---
+
+
+## Example Usage
+
+```bash
+
+from ternary_search_tree import TernarySearchTree
+
+tst = TernarySearchTree()
+
+# Insert words
+tst.insert("cat")
+tst.insert("can")
+tst.insert("cab")
+
+# Exact search
+print(tst.search("cat", exact=True))  # True
+print(tst.search("ca", exact=True))   # False
+
+# Prefix search
+print(tst.search("ca", exact=False))  # True
+
+```
