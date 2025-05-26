@@ -101,3 +101,10 @@ Walltime: 00-00:30:00
 Benchmark completed and plot saved.
 
 ```
+
+## Conclusion
+
+This project showcases a full pipeline from data structure design to performance evaluation at scale. By implementing the Ternary Search Tree from scratch and rigorously benchmarking it on a high-performance computing cluster, we demonstrate not only the theoretical efficiency of TSTs but also their practical behavior under real workloads. The work reflects a hands-on understanding of algorithmic thinking, Python performance profiling, and cluster-based experimentation — tying together systems, structures, and scalability.
+
+Muhammad Abdul Rehman - 2470126
+Muhammad Umair - 2469710
