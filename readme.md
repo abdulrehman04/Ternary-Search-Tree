@@ -15,7 +15,7 @@ This project implements a *Ternary Search Tree (TST)* from scratch in Python and
 ## 🗂️ Directory Structure
 
 ```bash
-.
+
 ├── data/                          # Input dictionary (word list)
 ├── benchmark_plot.png            # Output benchmark plot
 ├── main_job.slurm                # SLURM job script for HPC
@@ -45,5 +45,39 @@ print(tst.search("ca", exact=True))   # False
 
 # Prefix search
 print(tst.search("ca", exact=False))  # True
+
+```
+
+---
+
+## Benchmark results
+
+The benchmark script evaluates performance for increasing word counts **(100–20,000)**. The result:
+
+Both insert and search operations scale linearly with input size.
+
+## Running Benchmarks on HPC (SLURM)
+
+The benchmarking was run on wICE cluster on KU Leuven HPC. The script used calls `tst_benchmark.py` to run the benchmarking and plots the result to `benchmark_plot.png`
+
+### Job script used
+
+```bash
+
+#!/bin/bash
+#SBATCH --job-name=benchmark_test
+#SBATCH --output=output_%j.txt
+#SBATCH --error=error_%j.txt
+#SBATCH --time=00:30:00
+#SBATCH --mem=4G
+#SBATCH --ntasks=1
+
+# Load libraries
+module load cluster/wice/interactive
+module load matplotlib/3.9.2-gfbf-2024a
+
+
+# Run your benchmark script
+python tst_benchmark.py
 
 ```
