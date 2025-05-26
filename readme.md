@@ -81,3 +81,23 @@ module load matplotlib/3.9.2-gfbf-2024a
 python tst_benchmark.py
 
 ```
+
+### Sample output
+
+```bash
+
+SLURM_JOB_ID: 64547222
+SLURM_JOB_USER: vsc37565
+SLURM_JOB_ACCOUNT: lp_h_ds_students
+SLURM_JOB_NAME: benchmark_test
+SLURM_CLUSTER_NAME: wice
+SLURM_JOB_PARTITION: batch
+SLURM_NNODES: 1
+SLURM_NODELIST: r33c22n4
+SLURM_JOB_CPUS_PER_NODE: 2
+Date: Mon May 26 02:23:07 CEST 2025
+Walltime: 00-00:30:00
+========================================================================
+Benchmark completed and plot saved.
+
+```
