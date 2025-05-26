@@ -23,9 +23,10 @@ This project implements a *Ternary Search Tree (TST)* from scratch in Python and
 │   ├── benchmark_plot_exported.png
 │   ├── output.png
 │   ├── server_directory.png
-├── benchmark_plot.png            # Output benchmark plot
 ├── main_job.slurm                # SLURM job script for HPC
+├── tst_benchmark.py              # Benchmarking script
 ├── ternary_search_tree.ipynb     # Usage + test notebook
+├── ternary_search_tree.py        # Actual implementation og TST
 
 ```
 
