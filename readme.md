@@ -9,6 +9,7 @@ This project implements a *Ternary Search Tree (TST)* from scratch in Python and
 - Build a character-efficient Ternary Search Tree
 - Benchmark insert and search operations at scale
 - Use VSC's HPC to evaluate performance under large inputs
+- Project contains a `screenshots` folder to show screenshots from HPC
 
 ---
 
@@ -19,6 +20,7 @@ This project implements a *Ternary Search Tree (TST)* from scratch in Python and
 ├── data/                          # Input dictionary (word list)
 ├── screenshots/
 │   ├── benchmark_plot.png
+│   ├── benchmark_plot_exported.png
 │   ├── output.png
 │   ├── server_directory.png
 ├── benchmark_plot.png            # Output benchmark plot
@@ -85,6 +87,10 @@ module load matplotlib/3.9.2-gfbf-2024a
 python tst_benchmark.py
 
 ```
+
+### Benchmark plot (exported from server)
+
+![Benchmark Plot](screenshots/benchmark_plot_exported.png)
 
 ### Sample output
 
