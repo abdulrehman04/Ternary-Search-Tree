@@ -53,6 +53,10 @@ print(tst.search("ca", exact=True))   # False
 # Prefix search
 print(tst.search("ca", exact=False))  # True
 
+.insert(word) — adds a word to the tree
+.search(word, exact=True) — checks for an exact match
+.search(word, exact=False) — checks if it's a prefix of any stored word
+
 ```
 
 ---
