@@ -39,9 +39,14 @@ class TernarySearchTree:
                 node.is_end = True
         return node
 
+    # Searches for a word in the Ternary Search Tree
+    # If exact is True, it will only return True if the word is exactly found.
+    # If exact is False, it will return True if the word is found anywhere in the tree.
     def search(self, word, exact=False):
         return self._search(self.root, word, 0, exact)
 
+    # Helper method to search for a word recursively
+    # It traverses the tree based on character comparison and checks for the word.
     def _search(self, node, word, index, exact):
         if word == '':
             return not exact and node is not None
