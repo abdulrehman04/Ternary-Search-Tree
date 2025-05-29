@@ -14,11 +14,15 @@ class TernarySearchTree:
     def __init__(self):
         self.root = None
 
+    # Inserts a word into the Ternary Search Tree
+    # If the word already exists, it will not be added again.
     def insert(self, word):
         if not word:
             return
         self.root = self._insert(self.root, word, 0)
 
+    # Helper method to insert a word recursively
+    # It traverses the tree based on character comparison and inserts the word.
     def _insert(self, node, word, index):
         char = word[index]
         if node is None:
