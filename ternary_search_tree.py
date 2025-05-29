@@ -1,3 +1,4 @@
+# Node class for each character in the tree
 class TSTNode:
     def __init__(self, char):
         self.char = char
@@ -7,6 +8,8 @@ class TSTNode:
         self.is_end = False
 
 
+# Main class for the Ternary Search Tree
+# This implementation allows for insertion, searching, and traversal of words.
 class TernarySearchTree:
     def __init__(self):
         self.root = None
@@ -70,8 +73,10 @@ class TernarySearchTree:
         self._traverse(node.eq, prefix + node.char, result)
         self._traverse(node.right, prefix, result)
 
+    # Returns the number of words in the tree
     def __len__(self):
         return len(self.traverse())
 
+    # Returns all strings stored in the tree
     def all_strings(self):
         return self.traverse()
