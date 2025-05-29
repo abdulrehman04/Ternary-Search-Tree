@@ -65,11 +65,13 @@ class TernarySearchTree:
                 return node.is_end if exact else True
         return self._search(node.eq, word, index + 1, exact)
 
+    # Traverses the Ternary Search Tree and returns all words stored in it
     def traverse(self):
         words = []
         self._traverse(self.root, '', words)
         return words
 
+    # Helper method to traverse the tree recursively
     def _traverse(self, node, prefix, result):
         if node is None:
             return
